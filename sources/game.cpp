@@ -1,12 +1,12 @@
-#include "sources/game.hpp"
+#include "../sources/game.hpp"
 #include <iostream>
 
+using namespace std;
 using namespace ariel;
 
 
-Game :: Game (){
+// Game::Game(){}
 
-}
 void Game::playTurn(){}
 
 void Game::printLastTurn(){}

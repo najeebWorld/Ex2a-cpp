@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include "Card.hpp"
+#include "card.hpp"
 #include <vector>
 
 
@@ -20,8 +20,8 @@ namespace ariel {
         private:
             string name;
             // char* name_;
-            vector <Card> cards;
-            vector <Card> CardsWon;
+            vector <card> cards;
+            vector <card> CardsWon;
     };
 
 

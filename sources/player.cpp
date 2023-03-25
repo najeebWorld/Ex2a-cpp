@@ -14,7 +14,7 @@ int Player::stacksize(){
     return 0;
 }
 
-string Player :: getName(){
+string Player::getName(){
     
     return "";
 }

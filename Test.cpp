@@ -2,6 +2,8 @@
 #include "./sources/player.hpp"
 #include "./sources/game.hpp"
 #include "doctest.h"
+//#pragma once
+
 
 #include <iostream>
 #include <stdexcept>
@@ -23,6 +25,40 @@ TEST_CASE("check the game constactor"){
     CHECK_NOTHROW(Game Game(p1,p2));
 }
 
+TEST_CASE("game functions"){
+    Player p1("Player1");
+    Player p2("Player2");
+    int cards = 52; 
+
+    CHECK(p1.stacksize() == (cards/2));
+    CHECK(p2.stacksize() == (cards/2));
+    CHECK(p1.stacksize() + p2.stacksize() == cards);
+
+
+    Game game(p1,p2);
+    game.playAll();
+    CHECK(p1.stacksize() != cards/2);
+    CHECK(p2.stacksize() != cards/2);
+
+
+
+    CHECK_THROWS(game.playTurn());
+    CHECK_THROWS(game.playAll());
+
+}
+TEST_CASE("first"){
+    Player p1("Alice");
+    Player p2("Bob");
+
+    Game game(p1,p2);
+    CHECK(p1.stacksize() == 0);
+    CHECK(p2.stacksize() == 0);
+    CHECK(p1.cardesTaken() == 0);
+    CHECK (p2.stacksize() == 0);
+
+
+}
+
 
 
 // TEST_CASE("check get name function"){
@@ -30,7 +66,7 @@ TEST_CASE("check the game constactor"){
 //     CHECK(strcmp(p1.getName(),"plater") == 0);
 // }
 
-TEST_CASE("checl all game function"){
+TEST_CASE("check all game function"){
     Player p1("player1");
     Player p2("player2");
 
@@ -54,7 +90,9 @@ TEST_CASE("player")
     
 
     SUBCASE ("getname"){
-       // CHECK(strcmp(p1.getName(),"Alice") == 0);
+        Player p1("Alice");
+        string name = p1.getName();
+        //CHECK(strcmp(name,"Alice") == 0);
         //CHECK(p1.getName() == "Alice");
         CHECK(p1.stacksize()==0);
         CHECK(p1.cardesTaken()==0);
@@ -68,10 +106,8 @@ TEST_CASE("player")
         CHECK(p1.cardesTaken()==0);
     }
 
-
-    
-
 }
+
 
 // TEST_CASE("cards"){
 //     card c1 (hearts,ace);

@@ -15,7 +15,7 @@ namespace ariel {
         
         public : 
             Game();//default constructor.
-            Game(Player p1,Player p2) : playerP1(p1), playerP2(p2){}
+            Game(Player p1,Player p2) ;
             void playTurn();//play the game.
             void getNames();//get the names of two players.
             void battle();
@@ -34,14 +34,14 @@ namespace ariel {
             vector <string> players();//retuen the players
             
             //int playerSize();//return the size of players
-            
-        private:
-
-            string p1,p2;
             Player playerP1,playerP2;
-            int rounds; 
+            int rounds; //maybe I will not use them 
             int Max_rounds;
 
+        private:
+
+           // string p1,p2;
+           
 
 
 

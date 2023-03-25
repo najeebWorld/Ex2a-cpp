@@ -31,6 +31,9 @@ namespace ariel {
             void printWiner(); // prints the name of the winning player
             void printLog(); // prints all the turns played one line per turn (same format as game.printLastTurn())
             void printStats();
+            vector <string> players();//retuen the players
+            
+            //int playerSize();//return the size of players
             
         private:
 

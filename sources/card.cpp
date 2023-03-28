@@ -4,7 +4,7 @@
 using namespace ariel;
 
 	card::card(){}
-	card :: card (Type1 t, Value v){}
+	card :: card (Type1 typ, Value val){}
 
 	Type1 card::getSuit() { return clubs; }//return type1; }
 

@@ -19,8 +19,8 @@ namespace ariel {
             int cardesTaken();//prints the cards that this player won. 
             string getName();//return the name 
             void setName(string name);
-            void addCard(card c);//add card to the player
-            card playCard(int c);
+            void addCard(card car);//add card to the player
+            card playCard(int car);
 
             bool isPlaying();
             void setStatusPlay(bool turn);//set if the player is playing or not

@@ -19,11 +19,11 @@ namespace ariel {
 		card();
         // card (Value faceValue=deuce, Type1 type1 = clubs):
 		// type1(type1), faceValue(faceValue) {}
-		card(Type1 t,Value v);
+		card(Type1 typ,Value val);
 	    Type1 getSuit();
 	    Value getValue();
-	    string typename1(Type1 s);
-	    string valueName(Value v);
+	    string typename1(Type1 typName);
+	    string valueName(Value typName);
 	    string name();
     private:
         Type1 type1;

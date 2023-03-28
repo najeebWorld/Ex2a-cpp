@@ -15,7 +15,7 @@ namespace ariel {
         
         public : 
             Game();//default constructor.
-            Game(Player p1,Player p2) ;
+            Game(Player Plyp1,Player Plyp2) ;
             void playTurn();//play the game.
             void getNames();//get the names of two players.
             void battle();
